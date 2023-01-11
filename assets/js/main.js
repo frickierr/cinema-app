@@ -56,8 +56,6 @@ const handler = (e) => {
 
     searchString = e.target.value.trim();
 
-    console.log(e);
-
     debounce(() => {
         if (searchString && searchString.length > 2 && searchString !== searchLast) {
             getData(`http://www.omdbapi.com/?apikey=26a1d776&s=${searchString}`)
